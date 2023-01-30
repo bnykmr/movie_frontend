@@ -21,7 +21,7 @@ const Main = () => {
 
 
   return (
-    <div className='p-5 grid grid-cols-4 gap-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
+    <div className='p-5 grid grid-cols-4 gap-4 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 '>
       {data && data.results.map((movie) => {
         return <div onMouseLeave={() => { dispatch(changeShow(false)); }} onMouseEnter={() => { dispatch(changeShow(true)) }} onClick={() => nav('/movie/detail', { state: { movieId: movie.id, poster_path: movie.poster_path } })} key={movie.id} className='shadow-xl hover:scale-105 ease-in duration-300 cursor-pointer text-justify rounded-3xl'>
           <img src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.poster_path}`} className='w-full h-[400px] object-fill rounded-3xl'></img>
